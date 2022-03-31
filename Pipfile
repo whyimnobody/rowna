@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==4.0.3"
+django-cors-headers = "*"
+django-countries = "*"
+django-environ = "*"
+django-filter = "*"
+django-money = "*"
+drf-spectacular = "*"
+djangorestframework = "*"
+pandas = "*"
+pycountry = "*"
+fuzzywuzzy = "*"
+django-extensions = "*"
+requests = "*"
+
+[dev-packages]
+black = "*"
+pytest = "*"
+ipython = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
