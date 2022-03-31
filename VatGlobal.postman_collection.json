@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "f510fb5c-e39d-488f-be9f-4ceaa69d1fe6",
+		"name": "VatGlobal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload CSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/seven/Downloads/transactions.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/transactions/upload/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/transactions/?country=NZ&date=2022/03/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions",
+						""
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "NZ"
+						},
+						{
+							"key": "date",
+							"value": "2022/03/30"
+						},
+						{
+							"key": "currency",
+							"value": "USD",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
